@@ -11,7 +11,6 @@ function MersenneTwister(seed) {
     seed = `nfa${Array.from({ length: 36}, () => p[Math.random() * p.length | 0]).join("")}`;
   }
 
-  window.seed = seed;
 
   let hash = 0;
   for (let i = 0; i < seed.length; i++) {
