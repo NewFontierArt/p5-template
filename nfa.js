@@ -3,11 +3,14 @@
 var nfa_finished = false
 var nfa_traits = []
 
+
+
 function MersenneTwister(seed) {
   if (seed == null) {
     const p = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     seed = `nfa${Array.from({ length: 36}, () => p[Math.random() * p.length | 0]).join("")}`;
   }
+
 
   let hash = 0;
   for (let i = 0; i < seed.length; i++) {
